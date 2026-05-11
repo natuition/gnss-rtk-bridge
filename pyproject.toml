@@ -1,0 +1,24 @@
+[project]
+name = "GNSS-RTK-bridge"
+version = "0.1.0"
+description = "Bridge GNSS NMEA to UDP protobuf and NTRIP RTCM corrections"
+requires-python = ">=3.11"
+dependencies = [
+  "protobuf>=5.0.0",
+  "pygnssutils>=1.1.0",
+  "pynmeagps>=1.0.40",
+  "pyrtcm>=1.1.0",
+  "pyserial>=3.5",
+]
+
+[project.scripts]
+gnss-rtk-bridge = "gnss_rtk_bridge.main:main"
+gnss-config = "gnss_rtk_bridge.config_um982:main"
+udp-gnssfix-client = "gnss_rtk_bridge.udp_gnssfix_client:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["gnss_rtk_bridge*", "protos*"]

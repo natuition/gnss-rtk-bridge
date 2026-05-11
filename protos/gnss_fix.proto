@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package natuition.gnss;
+
+message GnssFix {
+  uint64 timestamp_monotonic_ns = 1;
+
+  bool valid = 2;
+
+  double latitude_deg = 3;
+  double longitude_deg = 4;
+  double altitude_m = 5;
+
+  float speed_mps = 6;
+  float heading_deg = 7;
+
+  uint32 fix_quality = 8;
+  uint32 satellites = 9;
+  uint64 last_rtcm_received_monotonic_ns = 10;
+}

@@ -1,0 +1,181 @@
+version = 1
+revision = 3
+requires-python = ">=3.11"
+
+[[package]]
+name = "certifi"
+version = "2026.4.22"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/25/ee/6caf7a40c36a1220410afe15a1cc64993a1f864871f698c0f93acb72842a/certifi-2026.4.22.tar.gz", hash = "sha256:8d455352a37b71bf76a79caa83a3d6c25afee4a385d632127b6afb3963f1c580", size = 137077, upload-time = "2026-04-22T11:26:11.191Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/22/30/7cd8fdcdfbc5b869528b079bfb76dcdf6056b1a2097a662e5e8c04f42965/certifi-2026.4.22-py3-none-any.whl", hash = "sha256:3cb2210c8f88ba2318d29b0388d1023c8492ff72ecdde4ebdaddbb13a31b1c4a", size = 135707, upload-time = "2026-04-22T11:26:09.372Z" },
+]
+
+[[package]]
+name = "gnss-rtk-bridge"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "protobuf" },
+    { name = "pygnssutils" },
+    { name = "pynmeagps" },
+    { name = "pyrtcm" },
+    { name = "pyserial" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "protobuf", specifier = ">=5.0.0" },
+    { name = "pygnssutils", specifier = ">=1.1.0" },
+    { name = "pynmeagps", specifier = ">=1.0.40" },
+    { name = "pyrtcm", specifier = ">=1.1.0" },
+    { name = "pyserial", specifier = ">=3.5" },
+]
+
+[[package]]
+name = "paho-mqtt"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/39/15/0a6214e76d4d32e7f663b109cf71fb22561c2be0f701d67f93950cd40542/paho_mqtt-2.1.0.tar.gz", hash = "sha256:12d6e7511d4137555a3f6ea167ae846af2c7357b10bc6fa4f7c3968fc1723834", size = 148848, upload-time = "2024-04-29T19:52:55.591Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c4/cb/00451c3cf31790287768bb12c6bec834f5d292eaf3022afc88e14b8afc94/paho_mqtt-2.1.0-py3-none-any.whl", hash = "sha256:6db9ba9b34ed5bc6b6e3812718c7e06e2fd7444540df2455d2c51bd58808feee", size = 67219, upload-time = "2024-04-29T19:52:48.345Z" },
+]
+
+[[package]]
+name = "protobuf"
+version = "7.34.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6b/6b/a0e95cad1ad7cc3f2c6821fcab91671bd5b78bd42afb357bb4765f29bc41/protobuf-7.34.1.tar.gz", hash = "sha256:9ce42245e704cc5027be797c1db1eb93184d44d1cdd71811fb2d9b25ad541280", size = 454708, upload-time = "2026-03-20T17:34:47.036Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ec/11/3325d41e6ee15bf1125654301211247b042563bcc898784351252549a8ad/protobuf-7.34.1-cp310-abi3-macosx_10_9_universal2.whl", hash = "sha256:d8b2cc79c4d8f62b293ad9b11ec3aebce9af481fa73e64556969f7345ebf9fc7", size = 429247, upload-time = "2026-03-20T17:34:37.024Z" },
+    { url = "https://files.pythonhosted.org/packages/eb/9d/aa69df2724ff63efa6f72307b483ce0827f4347cc6d6df24b59e26659fef/protobuf-7.34.1-cp310-abi3-manylinux2014_aarch64.whl", hash = "sha256:5185e0e948d07abe94bb76ec9b8416b604cfe5da6f871d67aad30cbf24c3110b", size = 325753, upload-time = "2026-03-20T17:34:38.751Z" },
+    { url = "https://files.pythonhosted.org/packages/92/e8/d174c91fd48e50101943f042b09af9029064810b734e4160bbe282fa1caa/protobuf-7.34.1-cp310-abi3-manylinux2014_s390x.whl", hash = "sha256:403b093a6e28a960372b44e5eb081775c9b056e816a8029c61231743d63f881a", size = 340198, upload-time = "2026-03-20T17:34:39.871Z" },
+    { url = "https://files.pythonhosted.org/packages/53/1b/3b431694a4dc6d37b9f653f0c64b0a0d9ec074ee810710c0c3da21d67ba7/protobuf-7.34.1-cp310-abi3-manylinux2014_x86_64.whl", hash = "sha256:8ff40ce8cd688f7265326b38d5a1bed9bfdf5e6723d49961432f83e21d5713e4", size = 324267, upload-time = "2026-03-20T17:34:41.1Z" },
+    { url = "https://files.pythonhosted.org/packages/85/29/64de04a0ac142fb685fd09999bc3d337943fb386f3a0ec57f92fd8203f97/protobuf-7.34.1-cp310-abi3-win32.whl", hash = "sha256:34b84ce27680df7cca9f231043ada0daa55d0c44a2ddfaa58ec1d0d89d8bf60a", size = 426628, upload-time = "2026-03-20T17:34:42.536Z" },
+    { url = "https://files.pythonhosted.org/packages/4d/87/cb5e585192a22b8bd457df5a2c16a75ea0db9674c3a0a39fc9347d84e075/protobuf-7.34.1-cp310-abi3-win_amd64.whl", hash = "sha256:e97b55646e6ce5cbb0954a8c28cd39a5869b59090dfaa7df4598a7fba869468c", size = 437901, upload-time = "2026-03-20T17:34:44.112Z" },
+    { url = "https://files.pythonhosted.org/packages/88/95/608f665226bca68b736b79e457fded9a2a38c4f4379a4a7614303d9db3bc/protobuf-7.34.1-py3-none-any.whl", hash = "sha256:bb3812cd53aefea2b028ef42bd780f5b96407247f20c6ef7c679807e9d188f11", size = 170715, upload-time = "2026-03-20T17:34:45.384Z" },
+]
+
+[[package]]
+name = "pygnssutils"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "paho-mqtt" },
+    { name = "pyqgc" },
+    { name = "pysbf2" },
+    { name = "pyserial" },
+    { name = "pyspartn" },
+    { name = "pyubx2" },
+    { name = "pyubxutils" },
+    { name = "pyunigps" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/49/b5/815b6dff22675466ae4f691caa462bf525adb570c42db109d39c1dd62c67/pygnssutils-1.2.0.tar.gz", hash = "sha256:870f2906f293cc9b96bd53f14b0b815bee22785b23a1f726a221c2eb2cdee6b6", size = 140241, upload-time = "2026-05-09T08:04:08.918Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/45/7c5917e273106a81a40b2cb612ed854ac6d106760863908ce7f3dedbe901/pygnssutils-1.2.0-py3-none-any.whl", hash = "sha256:f40729b171dfa68ac79e517a2d986148c321428c5ccf757a7136d010e1df1416", size = 111683, upload-time = "2026-05-09T08:04:07.577Z" },
+]
+
+[[package]]
+name = "pynmeagps"
+version = "1.1.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/71/714e5ded86d4eec1f2eda543af1b4aa1992ae29ae09c5cfcd61ecef24fbd/pynmeagps-1.1.4.tar.gz", hash = "sha256:edcfc1a5fb413d3b487943dca515308379c5f6d666c1ed8940454c5c61fa084d", size = 97493, upload-time = "2026-04-27T07:03:54.688Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/79/b4/74205f3ca69f70d31daead938c02c18dbefc7f37ed0a30ccf00a7d4cbb69/pynmeagps-1.1.4-py3-none-any.whl", hash = "sha256:e57d0728a23076cc600107bc228febf3af6a9b75a993445719d765c324dfbaf4", size = 63623, upload-time = "2026-04-27T07:03:53.017Z" },
+]
+
+[[package]]
+name = "pyqgc"
+version = "0.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pynmeagps" },
+    { name = "pyrtcm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/33/10/737028bab6b2387657d78ce5f3d3e94146b631e620affdb1f1633e0114e0/pyqgc-0.2.2.tar.gz", hash = "sha256:3ad3fe6e865951d05cc87307f7263d4f5bd0a8023bec9beb24501310afbc0671", size = 40087, upload-time = "2026-02-27T11:14:04.497Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/aa/58/d7d41000817ca6b74e4f38048b9b5ff979ab69ce20716af4c9cdbc767cca/pyqgc-0.2.2-py3-none-any.whl", hash = "sha256:8373f0375d99c48bf59b60152b77f5b1eda0a72745c9b3182e9e1ec94144460f", size = 25699, upload-time = "2026-02-27T11:14:02.742Z" },
+]
+
+[[package]]
+name = "pyrtcm"
+version = "1.1.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pynmeagps" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/be/99/9f87002c6c26a8e6d671f99244d87efcb3d3f27b4559ca368e8541bbe9c9/pyrtcm-1.1.12.tar.gz", hash = "sha256:dfc86ae158c901e56d296e02f00b7886c4dbc5b453380c67b8722678ab8eb68e", size = 100598, upload-time = "2026-03-21T16:34:29.039Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/e8/02570e158b2467e8c1aa40377ae82dd325129174d378ad468a23da2047c1/pyrtcm-1.1.12-py3-none-any.whl", hash = "sha256:0162ee5f8ef75666165f3261febd741f3ae6d0d295af665fcbf11986f8d9ba8e", size = 42784, upload-time = "2026-03-21T16:34:27.863Z" },
+]
+
+[[package]]
+name = "pysbf2"
+version = "1.0.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pynmeagps" },
+    { name = "pyrtcm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/df/27/e56a2a54a3ee4e938d2373160cfd8943f023655f0fe6f559ffc5cfc48560/pysbf2-1.0.4.tar.gz", hash = "sha256:916f0c2964fc1f9ca4061bdfdb1176f58858aac57d75182424cb9a02360742b3", size = 71307, upload-time = "2026-03-09T11:31:37.392Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/31/cf/09f60712a6af633a90c01be7144243fcb715443f3e5e5fff95614c076ce1/pysbf2-1.0.4-py3-none-any.whl", hash = "sha256:9efe1d69bbc3002f4e63d9856681570de23e50c92527f96bc604cde75ffc4212", size = 35048, upload-time = "2026-03-09T11:31:36.103Z" },
+]
+
+[[package]]
+name = "pyserial"
+version = "3.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/7d/ae3f0a63f41e4d2f6cb66a5b57197850f919f59e558159a4dd3a818f5082/pyserial-3.5.tar.gz", hash = "sha256:3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb", size = 159125, upload-time = "2020-11-23T03:59:15.045Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/bc/587a445451b253b285629263eb51c2d8e9bcea4fc97826266d186f96f558/pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0", size = 90585, upload-time = "2020-11-23T03:59:13.41Z" },
+]
+
+[[package]]
+name = "pyspartn"
+version = "1.0.9"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1c/c9/db2c3513644865094ec89e8434ddbb545e2b0c6a3ab4ca72559b66778e15/pyspartn-1.0.9.tar.gz", hash = "sha256:44db0f366b004e5a8971b1cd64896a5d701cf4e4b6111c3b06141709010c692d", size = 80565, upload-time = "2026-03-11T10:14:45.691Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/33/5b/029c5b2745f856acffb7b8c952771cc6eab01ef16ef27885466943f4cff3/pyspartn-1.0.9-py3-none-any.whl", hash = "sha256:a16f7f965ff2d16f05635467d2476607481309e26b9b8e7246f9500024f9e432", size = 34985, upload-time = "2026-03-11T10:14:43.522Z" },
+]
+
+[[package]]
+name = "pyubx2"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pynmeagps" },
+    { name = "pyrtcm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/30/3f/5d391d58d640d68a89c0724b8da7eb5fd5a89e253de7f4283bdafa225f18/pyubx2-1.3.0.tar.gz", hash = "sha256:b6f212b799d6ff16263fc1a32daeddb565ea4dca2604a26623b9a83c7a035989", size = 172705, upload-time = "2026-04-30T22:03:58.617Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d0/dc/543490e1f560ee6c2252b51046bc2e9537f3eda5cd6bad4571922d33f306/pyubx2-1.3.0-py3-none-any.whl", hash = "sha256:df10c3367d760bf3e302b881a2d67e1a12a783bcf7fb5f7b73b2a9cc26ee7e2d", size = 76853, upload-time = "2026-04-30T22:03:56.755Z" },
+]
+
+[[package]]
+name = "pyubxutils"
+version = "1.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyserial" },
+    { name = "pyubx2" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/91/80/b90f04b6c082aefa5af1217e530e4fd29e5fd351e5124056c47e06e53c53/pyubxutils-1.0.6.tar.gz", hash = "sha256:87ab81b65e96d6ec533936fd7c540b3f2291cf6ed963514d6fabb9b8cb2b6fef", size = 30876, upload-time = "2026-02-11T18:13:16.125Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/13/dc/819951f5eacb450591705b6d2dfd10177cd47e3d791ddaf78fb2620e9faf/pyubxutils-1.0.6-py3-none-any.whl", hash = "sha256:71e44929cd0b8bd1e6ff01b94566d8b114d70f79cb5cf8540baca2fbbf085b92", size = 33182, upload-time = "2026-02-11T18:13:14.903Z" },
+]
+
+[[package]]
+name = "pyunigps"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pynmeagps" },
+    { name = "pyrtcm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/81/ef/ff3a74af365750d757c3675f16c34f4faad7f27eab9140e689cce256ef4a/pyunigps-1.0.0.tar.gz", hash = "sha256:01f7298df8eff8beaad03c2b3a8fd0ddc9781096a210ceaf97a2bbf0b0ee6eba", size = 69859, upload-time = "2026-03-26T08:31:44.012Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a0/c3/c56723ad4e9beb09be40b3696dddb61287fbdc00e074b5eb273e330afdec/pyunigps-1.0.0-py3-none-any.whl", hash = "sha256:98e3c5251ef318558528ef36f1de2ff7b6d13365408347fde7d9d813da7f8eb4", size = 33455, upload-time = "2026-03-26T08:31:42.85Z" },
+]
