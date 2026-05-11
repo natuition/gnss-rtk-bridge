@@ -216,8 +216,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-<<<<<<< HEAD
-=======
 
 *.egg-info
->>>>>>> e18a5cf (feat: udp bridge for connect um980 and ntripclient and publish gnss info in udp)
