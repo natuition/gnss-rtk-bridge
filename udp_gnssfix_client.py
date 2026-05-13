@@ -11,7 +11,7 @@ except ImportError as exc:  # pragma: no cover
         "Missing generated protobuf module. Generate protos/gnss_fix_pb2.py with protoc first."
     ) from exc
 
-from gnss_rtk_bridge.udp_consumer import UdpGnssFixConsumer
+from gnss_rtk_bridge.udp_consumer import UdpGpsConsumer
 
 
 def _optional_present(msg, field: str) -> bool:
@@ -28,7 +28,11 @@ def _fmt_float(value: float, fmt: str) -> str:
 
 def _render(msg, addr: tuple[str, int], packets: int, last_rx: float) -> str:
     now_ns = time.monotonic_ns()
-    bridge_age_s = (now_ns - msg.timestamp_monotonic_ns) / 1e9 if msg.timestamp_monotonic_ns else 0.0
+    bridge_age_s = (
+        (now_ns - msg.timestamp_monotonic_ns) / 1e9
+        if msg.timestamp_monotonic_ns
+        else 0.0
+    )
     lines = [
         "GNSS UDP Monitor (Ctrl+C to quit)",
         "",
@@ -65,7 +69,7 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=5010, help="Bind UDP port")
     args = parser.parse_args()
 
-    consumer = UdpGnssFixConsumer(args.host, args.port)
+    consumer = UdpGpsConsumer(args.host, args.port)
     consumer.start()
 
     # Clear screen once, then repaint in place.
