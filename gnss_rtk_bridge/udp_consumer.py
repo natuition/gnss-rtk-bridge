@@ -6,8 +6,9 @@ import time
 from dataclasses import dataclass
 
 try:
-    from protos import gnss_fix_pb2
+    from protos import GnssFix
 except ImportError as exc:  # pragma: no cover
+    print(exc)
     raise RuntimeError(
         "Missing generated protobuf module. Generate protos/gnss_fix_pb2.py with protoc first."
     ) from exc
@@ -15,7 +16,7 @@ except ImportError as exc:  # pragma: no cover
 
 @dataclass(frozen=True)
 class GnssFixSample:
-    msg: gnss_fix_pb2.GnssFix
+    msg: GnssFix
     addr: tuple[str, int]
     packets: int
     last_rx_monotonic: float
@@ -34,7 +35,7 @@ class UdpGnssFixConsumer(threading.Thread):
         self._packets = 0
         self._last_rx_monotonic = time.monotonic()
         self._last_addr = (host, port)
-        self._last_msg = gnss_fix_pb2.GnssFix()
+        self._last_msg = GnssFix()
 
         self._sock: socket.socket | None = None
 
@@ -74,7 +75,7 @@ class UdpGnssFixConsumer(threading.Thread):
                 finally:
                     sock.settimeout(self._timeout_s)
 
-                msg = gnss_fix_pb2.GnssFix()
+                msg = GnssFix()
                 try:
                     msg.ParseFromString(latest_data)
                 except Exception:
@@ -94,7 +95,7 @@ class UdpGnssFixConsumer(threading.Thread):
 
     def get_last(self) -> GnssFixSample:
         with self._lock:
-            msg = gnss_fix_pb2.GnssFix()
+            msg = GnssFix()
             msg.CopyFrom(self._last_msg)
             return GnssFixSample(
                 msg=msg,

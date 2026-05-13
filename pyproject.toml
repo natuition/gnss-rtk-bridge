@@ -1,5 +1,5 @@
 [project]
-name = "gnss-rtk-bridge"
+name = "gnss_rtk_bridge"
 version = "1.0.0"
 description = "Bridge GNSS NMEA to UDP protobuf and NTRIP RTCM corrections"
 requires-python = ">=3.11"
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-gnss-rtk-bridge = "gnss_rtk_bridge.main:main"
+gnss_rtk_bridge = "gnss_rtk_bridge.main:main"
 gnss-config = "gnss_rtk_bridge.config_um982:main"
 udp-gnssfix-client = "gnss_rtk_bridge.udp_gnssfix_client:main"
 
