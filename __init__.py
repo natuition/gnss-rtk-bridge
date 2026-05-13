@@ -1,2 +1,2 @@
-from protos_gnss_rtk_bridge import GnssFix
-from gnss_rtk_bridge import UdpGnssFixConsumer, GnssFixSample
+from .protos_gnss_rtk_bridge import GnssFix
+from .gnss_rtk_bridge import UdpGnssFixConsumer, GnssFixSample
