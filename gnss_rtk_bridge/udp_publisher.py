@@ -5,7 +5,7 @@ import socket
 from gnss_rtk_bridge.state import GnssState
 
 try:
-    from protos import gnss_fix_pb2
+    from protos_gnss_rtk_bridge import gnss_fix_pb2
 except ImportError as exc:  # pragma: no cover
     raise RuntimeError(
         "Missing generated protobuf module. Run protoc before starting the service. "
