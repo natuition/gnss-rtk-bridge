@@ -1,6 +1,6 @@
 [project]
-name = "GNSS-RTK-bridge"
-version = "0.1.0"
+name = "gnss-rtk-bridge"
+version = "1.0.0"
 description = "Bridge GNSS NMEA to UDP protobuf and NTRIP RTCM corrections"
 requires-python = ">=3.11"
 dependencies = [
