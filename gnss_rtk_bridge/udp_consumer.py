@@ -6,7 +6,7 @@ import time
 from dataclasses import dataclass
 
 try:
-    from protos_gnss_rtk_bridge import GnssFix
+    from gnss_rtk_bridge.protos import GnssFix
 except ImportError as exc:  # pragma: no cover
     print(exc)
     raise RuntimeError(

@@ -5,7 +5,7 @@ import sys
 import time
 
 try:
-    from protos_gnss_rtk_bridge import gnss_fix_pb2
+    from gnss_rtk_bridge.protos import gnss_fix_pb2
 except ImportError as exc:  # pragma: no cover
     raise RuntimeError(
         "Missing generated protobuf module. Generate protos/gnss_fix_pb2.py with protoc first."
