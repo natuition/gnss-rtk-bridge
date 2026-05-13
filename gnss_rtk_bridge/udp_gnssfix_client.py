@@ -5,13 +5,13 @@ import sys
 import time
 
 try:
-    from gnss_rtk_bridge.protos import gnss_fix_pb2
+    from .protos import GnssFix
 except ImportError as exc:  # pragma: no cover
     raise RuntimeError(
         "Missing generated protobuf module. Generate protos/gnss_fix_pb2.py with protoc first."
     ) from exc
 
-from gnss_rtk_bridge.udp_consumer import UdpGnssFixConsumer
+from . import UdpGnssFixConsumer
 
 
 def _optional_present(msg, field: str) -> bool:

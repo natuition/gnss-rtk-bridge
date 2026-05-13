@@ -5,7 +5,7 @@ import socket
 from gnss_rtk_bridge.state import GnssState
 
 try:
-    from gnss_rtk_bridge.protos import gnss_fix_pb2
+    from .protos import GnssFix
 except ImportError as exc:  # pragma: no cover
     raise RuntimeError(
         "Missing generated protobuf module. Run protoc before starting the service. "
@@ -19,7 +19,7 @@ class UdpProtobufPublisher:
         self._sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     def publish(self, state: GnssState) -> None:
-        msg = gnss_fix_pb2.GnssFix()
+        msg = GnssFix()
         msg.timestamp_monotonic_ns = int(state.timestamp_monotonic_ns)
         msg.valid = bool(state.valid)
 
