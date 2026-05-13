@@ -1,3 +1,3 @@
 """GNSS-RTK-bridge package."""
 
-from .udp_consumer import UdpGnssFixConsumer
+from .udp_consumer import UdpGnssFixConsumer, GnssFixSample
